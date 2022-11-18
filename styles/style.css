@@ -1,0 +1,34 @@
+body {
+    width: 100vw;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.rectangles-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangle {
+    background: black;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+}
+
+img.building {
+    width: 100%;
+    height: 100%;
+}
+
+img.logo {
+    height: 50px;
+}
