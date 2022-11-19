@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+main {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    background-color: dimgray;
+    padding: 20px;
+    height: auto;
+}
+
+.collapsible-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    position: relative;
+}
+
+.active, .collapsible-menu:hover {
+    background-color: orangered;
+}
+
+.menu__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, 0);
+    display: none;
+    flex-direction: column;
+    background-color: green;
+}
+
+.collapsible-menu__rectangle {
+    background: black;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+}
+
+.collapsible-menu__item {
+    height: 30px;
+    width: 100px;
+    border: 3px solid darkslategray;
+}
+
+.content-wrapper {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.content__description {
+    align-self: center;
+}
+
+.services-scope {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    margin: 60px 0;
+    justify-content: space-between;
+    column-gap: 25px;
+}
+
+.service {
+    margin: 50px 0;
+    border: 5px solid darkorange;
+    height: 150px;
+    width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.service:hover {
+    transform: scale(1.2);
+    transition: .3s, -webkit-mask-size .3s .3s;
+}
+
+img.service__img {
+    height: 70px;
+    width: 80px;
+    position: absolute;
+    transform: translate(0, -50%);
+}
+
+img.building {
+    width: 100%;
+    height: 100%;
+}
+
+img.logo {
+    height: 50px;
+}
+
+h1 {
+    font-family: Calibri, serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 35pt;
+}
+
+p {
+    text-align: center;
+    font-family: Calibri, serif;
+    margin-top: 10px;
+    font-size: 14pt;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: calc(200px * 2 + 25px + 2 * 30px)) {
+    .services-scope {
+        grid-template-columns: 200px;
+        grid-template-rows: repeat(4, 150px);
+        row-gap: 60px;
+    }
+}
+
+@media screen
+    and (min-width: calc(200px * 2 + 25px + 2 * 30px))
+    and (max-width: calc(200px * 4 + 25px * 3 + 2 * 30px)) {
+    .services-scope {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 150px);
+        row-gap: 60px;
+    }
+}
