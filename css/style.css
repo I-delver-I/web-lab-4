@@ -67,9 +67,12 @@ footer {
 
 .content-wrapper {
     padding: 30px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: stretch;
+    justify-content: space-evenly;
 }
 
 p.content__description {
@@ -131,7 +134,7 @@ p {
     align-self: flex-end;
 }
 
-@media screen and (max-width: calc(200px * 2 + 25px + 2 * 30px)) {
+@media screen and (max-width: calc(200px * 4 + 25px * 3 + 2 * 30px + 80px)) {
     .services-scope {
         grid-template-columns: 200px;
         grid-template-rows: repeat(4, 150px);
@@ -139,12 +142,12 @@ p {
     }
 }
 
-@media screen
-    and (min-width: calc(200px * 2 + 25px + 2 * 30px))
-    and (max-width: calc(200px * 4 + 25px * 3 + 2 * 30px)) {
-    .services-scope {
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: repeat(2, 150px);
-        row-gap: 60px;
-    }
-}
+/*@media screen*/
+/*    and (min-width: calc(200px * 2 + 25px + 2 * 30px + 30vw))*/
+/*    and (max-width: calc(200px * 4 + 25px * 3 + 2 * 30px + 80px)) {*/
+/*    .services-scope {*/
+/*        grid-template-columns: repeat(2, 200px);*/
+/*        grid-template-rows: repeat(2, 150px);*/
+/*        row-gap: 60px;*/
+/*    }*/
+/*}*/
